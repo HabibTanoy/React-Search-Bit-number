@@ -1,0 +1,115 @@
+@import './pricingPlans';
+@import './pricingFooter';
+@import './pricingCalculator';
+
+.price-header {
+  .heading {
+    margin-top: 2rem;
+  }
+}
+
+.free-price-content {
+  padding-left: 1.2rem;
+}
+
+.pricing-highlight {
+  display: flex;
+  flex-direction: row;
+
+  .color-block {
+    width: 12px;
+    height: 12px;
+    margin: 5px 25px 5px 0px;
+    border: none;
+    border-radius: 3px;
+  }
+}
+
+.color-sky {
+  background: #3497fd;
+}
+
+.color-paste {
+  background: #3acce1;
+}
+
+.color-violet {
+  background: #665eff;
+}
+
+//Pricing definition styles
+.pricing-def {
+  .heading {
+    position: relative;
+
+    h1 {
+      margin-left: 60px;
+    }
+
+    .shield-image {
+      position: absolute;
+      transform: scale(0.3);
+      top: -2.5em;
+      left: -2em;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1200px) {
+  .heading {
+    width: 100%;
+
+    p {
+      text-align: center;
+    }
+  }
+
+  .price-header {
+    .heading {
+      & > * {
+        margin-bottom: 1.5rem !important;
+      }
+    }
+  }
+
+  .free-price-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .pricing-highlight {
+      width: 220px;
+    }
+
+    .color-block {
+      margin: 5px 25px 5px 5px;
+    }
+  }
+
+  .pricing-def {
+    .heading {
+      position: static !important;
+
+      h1 {
+        margin-left: 0 !important;
+      }
+
+      .shield-image {
+        position: static !important;
+        transform: scale(0.6);
+      }
+    }
+  }
+}
+
+@media (min-width: 1900px) {
+  .pricing-highlight {
+    width: 300px !important;
+  }
+}

@@ -1,0 +1,287 @@
+@import './rupantorAnimation';
+
+.rupantor-wrapper {
+  padding: 0px 1em;
+
+  .heading {
+    text-align: justify;
+    h4 {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .by-bkoi {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  button {
+    margin-top: 20px;
+  }
+}
+
+.right-flex {
+  p {
+    margin-bottom: 2rem;
+  }
+}
+
+// Rupantor Image
+
+.hide-flex-column {
+  display: none;
+}
+
+.show-flex-column {
+  display: flex;
+}
+
+.content {
+  display: flex;
+
+  .color-block-rupantor {
+    width: 10px;
+    height: 10px;
+    margin: 1.3em 1.5em;
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+  }
+
+  .dots {
+    border-left: 6px dotted white;
+    height: 60px;
+    left: 50%;
+    margin-left: 1.6em;
+    margin-top: 1.5em;
+    top: 0;
+    opacity: 20%;
+  }
+}
+
+.rupantor-page {
+  position: relative;
+}
+
+.rupantor-anim {
+  height: 90vh;
+  width: 100%;
+  position: relative;
+}
+
+.box-1,
+.box-2,
+.box-3 {
+  color: #ffffff;
+  padding: 0 5em 0 0;
+  width: 100%;
+  border-radius: 0px 0px 0px 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+
+  &:after {
+    width: 20px;
+    height: 20px;
+    font-family: FontAwesome;
+    font-size: 2.5em;
+    display: block;
+    line-height: 100px;
+    color: $dark-grey;
+    //opacity: 20%;
+    position: absolute;
+    left: 8em;
+  }
+
+  .content-card {
+    .title {
+      margin-top: 1em;
+    }
+    & > * {
+      margin-bottom: 1em;
+    }
+  }
+}
+
+.box1-final,
+.box2-final,
+.box3-final {
+  transition-property: background;
+  transition-duration: 1s;
+  transition-delay: 2s;
+}
+
+.box-1 {
+  background: #77787e 0% 0% no-repeat padding-box;
+  height: 230px;
+  z-index: 3;
+
+  .content {
+    padding-top: 1em;
+  }
+
+  &:after {
+    content: '\f2e7';
+    top: 1em;
+  }
+}
+
+.box1-final {
+  background: #3ec384 0% 0% no-repeat padding-box !important;
+}
+
+.box-2 {
+  background: #626469 0% 0% no-repeat padding-box;
+  height: 460px;
+  z-index: 2;
+
+  .content {
+    padding-top: 15.3em;
+  }
+
+  &:after {
+    content: '\f015';
+    top: 6.5em;
+  }
+}
+
+.box2-final {
+  background: #35ac93 0% 0% no-repeat padding-box !important;
+}
+
+.box-3 {
+  background: #3c4045 0% 0% no-repeat padding-box;
+  height: 690px;
+  z-index: 1;
+
+  .content {
+    padding-top: 29em; // 462 + 1em padding
+  }
+
+  &:after {
+    content: '\f004';
+    top: 12.5em;
+  }
+}
+
+.box3-final {
+  background: #2e4160 0% 0% no-repeat padding-box !important;
+}
+
+@media (min-width: 768px) {
+  .rupantor-wrapper {
+    padding: 0px 6.5rem;
+    margin-top: -8rem;
+  }
+
+  .color-block-rupantor {
+    width: 12px !important;
+    height: 12px !important;
+    margin: 1em 2em !important;
+  }
+
+  .dots {
+    height: 60px !important;
+    margin-left: 2.2em !important;
+  }
+
+  .box-1,
+  .box-2,
+  .box-3 {
+    &:after {
+      left: 10em;
+    }
+
+    .content-card {
+      .title {
+        margin-top: 1em;
+      }
+      & > * {
+        margin-bottom: 1em;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .rupantor-wrapper {
+    padding: 0px 10rem;
+    margin-top: -10rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .rupantor-wrapper {
+    padding: 0 6rem;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+  }
+
+  .rupantor-page {
+    display: flex;
+    align-items: flex-start !important;
+    height: 100vh;
+  }
+
+  .box-1 {
+    height: 210px;
+  }
+
+  .box-2 {
+    height: 420px;
+  }
+
+  .box-3 {
+    height: 630px;
+  }
+
+  .rupantor-anim {
+    width: 550px;
+  }
+}
+
+@media (min-width: 1900px) {
+  .rupantor-page {
+    height: 100vh;
+  }
+
+  .rupantor-wrapper {
+    padding: 0 18rem;
+    align-self: flex-start;
+  }
+
+  .rupantor-anim {
+    //transform: scale(0.8);
+    width: 700px;
+
+    .content-card {
+      p {
+        font-size: 1.5rem;
+        line-height: 1.3;
+      }
+    }
+  }
+
+  .box-1,
+  .box-2,
+  .box-3 {
+    &::after {
+      left: 12em;
+    }
+  }
+
+  .box-1 {
+    height: 230px;
+  }
+
+  .box-2 {
+    height: 460px;
+  }
+
+  .box-3 {
+    height: 690px;
+  }
+}

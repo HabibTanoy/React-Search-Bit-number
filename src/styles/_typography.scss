@@ -1,0 +1,309 @@
+.brand-logo {
+  span {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 2.6rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 300;
+}
+
+h4 {
+  font-weight: 200;
+  font-size: 1.2rem;
+}
+
+.p-light-smaller,
+.p-light-small,
+.p-light-default {
+  font-weight: 300;
+}
+
+.p-normal {
+  font-weight: 400;
+}
+
+.p-medium {
+  font-weight: 500;
+}
+
+.p-light-smaller {
+  font-size: 1rem;
+}
+
+.p-light-small {
+  font-size: 1.1rem;
+}
+
+p {
+  //font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+
+.p-light-medium {
+  font-size: 1.3rem;
+}
+
+legend {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+small {
+  font-size: 0.8rem;
+}
+
+strong {
+  font-size: 1.3rem;
+}
+
+.dropdown-title {
+  legend {
+    font-size: 1em;
+  }
+}
+
+.bkoi-page {
+  h3 {
+    font-weight: 400;
+  }
+}
+
+// .dev-btns a button,
+// .built-btn a button {
+//   font-size: 1.1rem;
+// }
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .p-light-smaller {
+    font-size: 1.1rem;
+  }
+
+  .p-light-small {
+    font-size: 1.2rem;
+  }
+
+  p {
+    //font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+
+  .p-light-medium {
+    font-size: 1.4rem;
+  }
+
+  legend {
+    font-size: 1.5rem;
+  }
+
+  li {
+    a {
+      font-size: 1.3rem;
+    }
+  }
+
+  .bkoi-page {
+    h3 {
+      font-weight: 400;
+    }
+  }
+
+  .card-info a {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .brand-logo {
+    span {
+      font-size: 2rem;
+    }
+  }
+  h1 {
+    font-size: 2.6rem;
+    line-height: 3.5rem;
+  }
+
+  h3 {
+    line-height: 2.5rem;
+    font-size: 2.5rem;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+  }
+
+  .p-light-smaller {
+    font-size: 1.2rem;
+  }
+
+  .p-light-small {
+    font-size: 1.3rem;
+  }
+
+  p {
+    //font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+
+  .p-light-medium {
+    font-size: 1.4rem;
+  }
+
+  legend {
+    font-size: 1.7rem;
+  }
+
+  .card-info a,
+  .search-btn a {
+    font-size: 1.2rem;
+  }
+
+  li {
+    a {
+      font-size: 1.5rem !important;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .brand-logo {
+    span {
+      font-size: 1.5rem !important;
+    }
+  }
+
+  h1 {
+    font-size: 2rem;
+    line-height: 2.6rem;
+    font-weight: 500;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+  }
+
+  .p-light-smaller {
+    font-size: 1rem;
+  }
+
+  .p-light-small {
+    font-size: 1.1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
+
+  .p-light-medium {
+    font-size: 1.3rem;
+  }
+
+  legend {
+    font-weight: 500;
+    font-size: 1rem !important;
+  }
+
+  small {
+    font-size: 0.8rem;
+  }
+
+  li {
+    a {
+      font-size: 0.7rem !important;
+    }
+  }
+
+  .bkoi-page {
+    h3 {
+      font-weight: 400;
+    }
+  }
+
+  // .dev-btns a button,
+  // .built-btn a button {
+  //   font-size: 1.1rem;
+  // }
+}
+
+@media (min-width: 1900px) {
+  .brand-logo {
+    span {
+      font-size: 2rem !important;
+    }
+  }
+
+  h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    font-weight: 500;
+  }
+
+  h3 {
+    line-height: 3rem;
+    font-size: 2.5rem;
+  }
+
+  .p-light-smaller {
+    font-size: 1.2rem;
+  }
+
+  .p-light-small {
+    font-size: 1.3rem;
+  }
+
+  p {
+    //font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+
+  .p-light-medium {
+    font-size: 1.4rem;
+  }
+
+  legend {
+    font-weight: 500;
+    font-size: 1.3rem;
+  }
+
+  li {
+    a {
+      font-size: 0.8rem !important;
+    }
+  }
+
+  .bkoi-page {
+    h3 {
+      font-weight: 400;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.applink-page {
+  display: flex;
+  flex-direction: column;
+
+  .applink-image {
+    img {
+      width: 100%;
+      max-width: 450px;
+    }
+  }
+
+  .applink-content {
+    color: $dark-grey;
+    img {
+      width: 40%;
+      max-width: 220px;
+    }
+
+    .find {
+      margin: 1rem 0;
+    }
+  }
+}
+
+.applink-content {
+  margin-bottom: 2rem !important;
+}
+
+@media (min-width: 768px) {
+  .applink-content {
+    margin-bottom: 4rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1200px) {
+  .applink-page {
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+
+    .applink-content {
+      margin-left: 100px;
+      .find {
+        margin: 1.5rem 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 1900px) {
+  .applink-image {
+    img {
+      max-width: 700px !important;
+    }
+  }
+}

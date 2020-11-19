@@ -1,0 +1,284 @@
+//App Link page styles
+@import '_landingPage';
+@import '_appLink';
+@import '_bkoi';
+
+.ham {
+  z-index: 10 !important;
+}
+
+.cross {
+  width: 25px;
+}
+
+.toggle-nav {
+  display: flex !important;
+}
+
+.hide-mobile {
+  display: none;
+}
+
+.nav-icon {
+  opacity: 0.4 !important;
+}
+
+.nav-overlay {
+  display: none;
+  position: fixed;
+  top: 5vh;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba($color: $dark-grey, $alpha: 0.5);
+}
+
+.nav-overlay-active {
+  display: block;
+  animation: fade-in 300ms ease-in-out forwards;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  z-index: 6; // has to be more than the rupantor image animations
+  height: 5vh;
+  background-color: rgba($color: $navbar-background, $alpha: 0.85);
+
+  nav {
+    z-index: 0; // to make the links appear in desktop mode
+    ul {
+      padding-left: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      right: 0;
+      top: 3.5em;
+      background-color: white;
+      height: 90vh;
+      width: 85vw;
+      //z-index: -1 ; // for the ham menu to come through the ul
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+
+      img {
+        position: absolute;
+        right: 0;
+        top: 2rem;
+      }
+
+      & > * {
+        margin-bottom: 1.2rem;
+      }
+
+      & > li {
+        cursor: pointer;
+        margin-left: 10%;
+
+        &:first-child {
+          margin-top: 80px;
+        }
+
+        .nav-list {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 250px;
+          border-bottom: 0.8px solid rgba(0, 0, 0, 0.2);
+          padding: 0.5rem 0;
+          & > a {
+            text-transform: uppercase;
+            color: black;
+            letter-spacing: 0.1em;
+          }
+
+          .nav-icon {
+            transform: scale(0.8);
+          }
+        }
+      }
+    }
+  }
+}
+
+.dropdown-nav {
+  .dropdown-list {
+    display: flex !important;
+    flex-direction: column !important;
+    font-size: 0.8rem !important;
+    font-weight: 300;
+    margin-left: 10px;
+    margin-top: 10px;
+
+    a {
+      margin-bottom: 10px;
+      color: black;
+
+      &:last-child {
+        margin-bottom: 0px !important;
+      }
+    }
+  }
+}
+
+.static-nav {
+  position: relative !important;
+  background-color: white !important;
+  color: black !important;
+
+  .primary-text {
+    color: $dark-grey !important;
+  }
+
+  .nav-list a {
+    color: $dark-grey !important;
+  }
+}
+
+@media (min-width: 768px) {
+  header {
+    ul {
+      & > li {
+        &:first-child {
+          margin-top: 100px !important;
+        }
+      }
+
+      & > * {
+        margin-bottom: 1.5em !important;
+      }
+    }
+  }
+
+  .nav-list {
+    width: 400px !important;
+  }
+
+  .dropdown-list {
+    a {
+      margin-bottom: 15px !important;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .ham {
+    transform: scale(1.5);
+  }
+
+  header {
+    ul {
+      & > * {
+        margin-bottom: 2em !important;
+      }
+    }
+  }
+
+  .nav-list {
+    width: 500px !important;
+  }
+
+  .dropdown-list {
+    a {
+      margin-bottom: 20px !important;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .show-desktop {
+    display: flex;
+  }
+
+  .hide-desktop {
+    display: none;
+  }
+
+  header {
+    height: 8vh;
+    nav {
+      display: flex;
+      ul {
+        padding-left: 0 !important;
+        flex-direction: row;
+        position: inherit;
+        height: auto;
+        width: auto;
+        background-color: transparent;
+
+        & > li {
+          margin-left: 30px;
+          margin-bottom: 0px !important;
+          position: relative;
+          //background-color: chartreuse;
+
+          &:first-child {
+            margin-top: 0px !important;
+          }
+
+          .nav-list {
+            border-bottom: none;
+            width: 100% !important;
+            padding: 0px !important;
+
+            a {
+              padding: 5px;
+              color: white;
+              background-color: rgba($color: $dark-grey, $alpha: 0);
+              transition: background-color 500ms ease-in-out;
+
+              &:hover {
+                border-radius: 3px;
+                background-color: rgba($color: $dark-grey, $alpha: 1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .static-nav {
+    .nav-list {
+      a:hover {
+        background-color: rgb(221, 221, 221) !important;
+      }
+    }
+  }
+
+  .dropdown-nav {
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    left: -10px;
+    top: 28px;
+    white-space: nowrap; //wow important
+
+    .dropdown-list {
+      box-shadow: 3px 4px 20px -4px rgba(0, 0, 0, 0.25);
+      padding: 12px 15px;
+      cursor: pointer;
+      margin-left: 0px !important;
+      margin-top: 0px !important;
+
+      a {
+        color: black;
+        padding: 5px;
+        font-size: 0.9rem !important;
+
+        &:hover {
+          background-color: #e0dede;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1900px) {
+  header {
+    height: 6vh !important;
+  }
+}

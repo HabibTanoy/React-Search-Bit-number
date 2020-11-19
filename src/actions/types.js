@@ -1,0 +1,10 @@
+export const GET_PLACE = 'GET_PLACE';
+export const GET_PLACE_ERROR = 'GET_PLACE_ERROR';
+export const SET_PREV_PLACE = 'SET_PREV_PLACE';
+export const SEARCH_PLACES = 'SEARCH_PLACES';
+export const SEARCH_PLACES_ERROR = 'SEARCH_PLACES_ERROR';
+export const GET_NEARBY = 'GET_NEARBY';
+export const GET_NEARBY_ERROR = 'GET_NEARBY_ERROR';
+export const GET_RG_PLACE = 'GET_RG_PLACE';
+export const GET_RG_PLACE_ERROR = 'GET_RG_PLACE_ERROR';
+export const CLEAR_SEARCH = 'CLEAR_SEARCH';
