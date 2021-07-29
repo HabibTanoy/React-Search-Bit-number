@@ -17,7 +17,7 @@ export const searchPlaces = (text) => async (dispatch) => {
       `https://admin.barikoi.xyz:8090/search/address?search=${text}`
     );
 
-    console.log(res.data.places);
+    // console.log(res);
     dispatch({
       type: SEARCH_PLACES,
       payload: res.data.places,

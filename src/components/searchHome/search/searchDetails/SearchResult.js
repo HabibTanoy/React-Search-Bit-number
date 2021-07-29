@@ -1,4 +1,5 @@
-import React, { useState, Fragment } from 'react';
+import React, { useState, Fragment, useEffect } from 'react';
+import axios from 'axios';
 import { connect } from 'react-redux';
 import { getPlace } from '../../../../actions/search';
 import { getNearby } from '../../../../actions/search';
@@ -11,6 +12,15 @@ const SearchResult = ({ place, getNearby, resultFlag, rgPlace }) => {
   const [openModal, setOpenModal] = useState(false);
   const [openDropdown, setDropdown] = useState(false);
   const [openNearby, setOpenNearby] = useState(false);
+  const [postOffice, setPostOffice] = useState("");
+
+  useEffect(() => {
+    if(place && place.postCode) {
+      // setPostOffice(place.postCode);
+      getPostOfficeName(place.postCode)
+    }
+    
+  });
 
   const handleMobileClick = (e) => {
     e.preventDefault();
@@ -22,7 +32,7 @@ const SearchResult = ({ place, getNearby, resultFlag, rgPlace }) => {
   };
 
   const handleNearByClick = (e) => {
-    console.log(place.bit )
+    // console.log(place.bit )
     getNearby(e.target.name, place.longitude, place.latitude);
     setOpenNearby(true);
     setOpenModal(false);
@@ -32,7 +42,19 @@ const SearchResult = ({ place, getNearby, resultFlag, rgPlace }) => {
   let addr = place && place.Address.split(',');
   let address = addr && addr.slice(1, addr.length).join(',');
 
-
+  const getPostOfficeName = postCode => {
+    // console.log("demo");
+    if(postCode) {
+      axios.get(
+        `https://rupantor.barikoi.com/sugg/search/postcodebn?q=${postCode}`
+      ).then(res=> {
+        const PostOfficeName = res.data && res.data.length > 0 && res.data[0].postoffice_en
+        // console.log(PostOfficeName);
+        setPostOffice(PostOfficeName)
+      }).catch(err => console.error(err))
+    }
+  } 
+ 
   return (
     <Fragment>
       {place && resultFlag && (
@@ -55,13 +77,25 @@ const SearchResult = ({ place, getNearby, resultFlag, rgPlace }) => {
                 {place.area ? place.area + ',' : ''}
                 {place.city ? place.city : ''}
               </p>
-              <p className='postcode'>Postcode: {place.postCode}</p>
-              <p className='postcode'>Bit: {place.bit}</p>
+              
+              <p className='post-bit'>PostOffice Name: {postOffice}</p>
+              <p className='post-bit'>Postcode: {place.postCode}</p>
+              <p className='post-bit'>Bit: {place.bit.bit_number}</p>
               <div className='content-inner'>
                 <span className='variant-text'>{place.subType}</span>
                 <span>
                   Place Code :{' '}
                   <span className='variant-text'>{place.uCode} </span>
+                </span>
+              </div>
+              <div>
+              <span className="full-address">
+                  <p className="title">User this Address Format :</p>{' '}
+                {address ? address + ',' : ''}
+                {place.area ? place.area + ',' : ''}
+                {place.city ? place.city + ' ' : ' '}
+                {place.postCode ? place.postCode + '-' : ''}
+                {place.bit.bit_number}     
                 </span>
               </div>
             </div>
